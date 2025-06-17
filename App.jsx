@@ -6,6 +6,7 @@ import React from 'react';
 import Home from './src/screens/Home';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import Search from './src/screens/Search';
 
 //Create Navigation
 const Drawer = createDrawerNavigator();
@@ -21,6 +22,13 @@ const App = () => {
             component={Home}
             options={{
               drawerIcon: () => <Icon name="home" size={25} color={'blue'} />,
+            }}
+          />
+          <Drawer.Screen
+            name="Search"
+            component={Search}
+            options={{
+              drawerIcon: () => <Icon name="search" size={25} color={'blue'} />,
             }}
           />
         </Drawer.Navigator>
